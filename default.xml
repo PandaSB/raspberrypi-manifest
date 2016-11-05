@@ -8,5 +8,6 @@
 
   <project name="meta-sbarthelemy" path="poky/meta-sbarthelemy" remote="pandasb" upstream="refs/heads/master"/>
   <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" upstream="refs/heads/master"/>
+  <project name="meta-raspberrypi" path="poky/meta-raspberrypi" remote="yocto" upstream="refs/heads/master"/>
   <project name="poky" remote="yocto" upstream="refs/heads/master"/>
 </manifest>
