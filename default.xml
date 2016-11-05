@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote name="PandaSB" fetch="https://github.com/PandaSB"/>
-    <remote name="Yocto"   fetch="git://git.yoctoproject.org/"/>
-    <remote name="Oe"      fetch="git://git.openembedded.org/meta-openembedded"/>
+  <remote fetch="https://github.com/PandaSB" name="pandasb" >
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
 
-    <default revision="master" remote="PandaSB" sync-j="8"/>
-    <default revision="master" remote="Yocto" sync-j="8"/>
-    <default revision="master" remote="Oe" sync-j="8"/>
+  <default revision="master" remote="pandasb" sync-j="8"/>
 
-    <project name="poky.git" remote="Yocto" path="poky" />
-
-
+  <project name="meta-sbarthelemy" path="poky/meta-sbarthelemy" remote="pandasb" upstream="refs/heads/master"/>
+  <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" upstream="refs/heads/master"/>
+  <project name="poky" remote="yocto" upstream="refs/heads/master"/>
 </manifest>
